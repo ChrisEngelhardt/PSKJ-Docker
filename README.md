@@ -1,4 +1,7 @@
-# Example Dockerized container
+# Dockerized container
+Basic docker container to build pyhton3 based applications.
+Dependencies can be added to the dependencies.txt and will be installed with pip3.
+
 
 ## Build
 ```
