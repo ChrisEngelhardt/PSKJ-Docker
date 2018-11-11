@@ -1,7 +1,7 @@
 FROM python
 
 
-RUN apt-get update && apt-get install python-poppler poppler-utils -y
+#RUN apt-get update && apt-get install
 
 
 COPY ./requirements.txt /requirements.txt
