@@ -2,6 +2,9 @@
 Basic docker container to build pyhton3 based applications.
 Dependencies can be added to the dependencies.txt and will be installed with pip3.
 
+##Used Datasets
+* http://cocodataset.org/#download
+* https://www-intuidoc.irisa.fr/en/imadocsen-ondb-base-de-phrases-manuscrites-en-ligne/
 
 ## Build
 ```
