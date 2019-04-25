@@ -9,11 +9,15 @@ Dependencies can be added to the dependencies.txt and will be installed with pip
 
 
 ## Tags
-* 1.0-gpu (for gpu nvidia gpu support, requires nvidia-docker v2)
-* 1.0-cpu (for cpu only use)
 
 
-## Build
+| Version  |  Tag  |  Info |  Build |
+|----------|-------------|------|------|
+| 0.9 |  0.9-gpu    | for gpu nvidia gpu support (requires nvidia-docker v2) | [![pipeline status](https://git.dammit.at/chris/psjkg-docker/badges/master/pipeline.svg)](https://git.dammit.at/chris/psjkg-docker/commits/master)
+| 0.9 |    0.9-cpu   |   for cpu only use | [![pipeline status](https://git.dammit.at/chris/psjkg-docker/badges/master/pipeline.svg)](https://git.dammit.at/chris/psjkg-docker/commits/master)
+
+
+## How to build
 ```
 docker build -t psjkg .
 ```
