@@ -8,27 +8,21 @@ Dependencies can be added to the dependencies.txt and will be installed with pip
 
 ## Build
 ```
-docker build -t example .
-```
-
-For all upcomming commands we pass -v argument to mount the volume with the source instead of copy it.
-So we can start an interactive session and change python code without restarting the container.
-**Note: Withouth the -v argument there is no code in the container**
-
-## Start Main application
-```
-docker run -t  --rm -v `pwd`:/app/ example:latest
+docker build -t psjkg .
 ```
 
 
-## Forwarding parameters for running
+## Start the container in new lab mode (default)
 ```
-docker run -t  --rm -v `pwd`:/app/ example:latest python ./main.py PARAM1 PARAM2
-```
-
-
-## Start interactive session for development
-```
-docker run -it --rm -v `pwd`:/app/ example:latest /bin/bash
+docker run -v --privileged `pwd`/workdir:/tmp/  -p 8888:8888 psjkg
 ```
 
+
+## Start the container in default mode
+```
+docker run -t --rm --privileged -e mode='notebook'-v `pwd`/workdir:/tmp/psjkg
+```
+from string import maketrans, capitalize
+ImportError: cannot import name 'maketrans' from 'string' (/opt/conda/lib/python3.7/string.py)
+[118/1018] Generating obj dirs for /swift-source/build/buildbot_linux/swift-linux-x86_64/stdlib/private/SwiftPrivate/linux/x86_64/SwiftPrivate.o
+[119/1018] Generating Runtime.swift from Runtime.swift.gyb with ptr size = 8
