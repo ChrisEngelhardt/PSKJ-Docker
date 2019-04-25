@@ -2,9 +2,16 @@
 Basic docker container to build pyhton3 based applications.
 Dependencies can be added to the dependencies.txt and will be installed with pip3.
 
-## Used Datasets
-* http://cocodataset.org/#download
-* https://www-intuidoc.irisa.fr/en/imadocsen-ondb-base-de-phrases-manuscrites-en-ligne/
+## Importent Links
+* https://github.com/google/swift-jupyter
+* https://github.com/tensorflow/swift/blob/master/Installation.md#pre-built-packages
+* https://github.com/apple/swift/tree/tensorflow#linux
+
+
+##tags
+* 1.0-gpu (for gpu nvidia gpu support, requires nvidia-docker v2)
+* 1.0-cpu (for cpu only use)
+
 
 ## Build
 ```
