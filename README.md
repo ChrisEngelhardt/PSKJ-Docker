@@ -8,7 +8,7 @@ Dependencies can be added to the dependencies.txt and will be installed with pip
 * https://github.com/apple/swift/tree/tensorflow#linux
 
 
-##tags
+## Tags
 * 1.0-gpu (for gpu nvidia gpu support, requires nvidia-docker v2)
 * 1.0-cpu (for cpu only use)
 
@@ -21,13 +21,13 @@ docker build -t psjkg .
 
 ## Start the container in new lab mode (default)
 ```
-docker run -v --privileged `pwd`/workdir:/tmp/  -p 8888:8888 psjkg
+nvidia-docker run -v `pwd`/workdir:/tmp/ --privileged   -p 8888:8888 psjkg
 ```
 
 
 ## Start the container in default mode
 ```
-docker run -t --rm --privileged -e mode='notebook'-v `pwd`/workdir:/tmp/psjkg
+nvidia- docker run -t --rm --privileged -e mode='notebook' -v `pwd`/workdir:/tmp/psjkg
 ```
 from string import maketrans, capitalize
 ImportError: cannot import name 'maketrans' from 'string' (/opt/conda/lib/python3.7/string.py)
