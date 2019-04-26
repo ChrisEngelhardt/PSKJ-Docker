@@ -13,8 +13,8 @@ Dependencies can be added to the dependencies.txt and will be installed with pip
 
 | Version  |  Tag  |  Info |  Build |
 |----------|-------------|------|------|
-| 0.6 |  0.6-gpu    | for gpu nvidia gpu support (requires nvidia-docker v2) | [![pipeline status](https://git.dammit.at/chris/psjkg-docker/badges/master/pipeline.svg)](https://git.dammit.at/chris/psjkg-docker/commits/master)
-| 0.6 |    0.6-cpu   |   for cpu only use | [![pipeline status](https://git.dammit.at/chris/psjkg-docker/badges/master/pipeline.svg)](https://git.dammit.at/chris/psjkg-docker/commits/master)
+| 0.6 |  0.6-gpu    | for gpu nvidia gpu support (requires nvidia-docker v2) | 
+| 0.6 |    0.6-cpu   |   for cpu only use | 
 
 
 ## How to build
@@ -33,7 +33,3 @@ nvidia-docker run -v `pwd`/workdir:/tmp/ --privileged   -p 8888:8888 psjkg
 ```
 nvidia- docker run -t --rm --privileged -e mode='notebook' -v `pwd`/workdir:/tmp/psjkg
 ```
-from string import maketrans, capitalize
-ImportError: cannot import name 'maketrans' from 'string' (/opt/conda/lib/python3.7/string.py)
-[118/1018] Generating obj dirs for /swift-source/build/buildbot_linux/swift-linux-x86_64/stdlib/private/SwiftPrivate/linux/x86_64/SwiftPrivate.o
-[119/1018] Generating Runtime.swift from Runtime.swift.gyb with ptr size = 8
