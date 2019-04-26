@@ -1,6 +1,6 @@
-# Dockerized container
-Basic docker container to build pyhton3 based applications.
-Dependencies can be added to the dependencies.txt and will be installed with pip3.
+## Notes
+This container needs privileged permissions to run swift code.
+
 
 ## Importent Links
 * https://github.com/google/swift-jupyter
@@ -11,25 +11,31 @@ Dependencies can be added to the dependencies.txt and will be installed with pip
 ## Tags
 
 
-| Version  |  Tag  |  Info |  Build |
-|----------|-------------|------|------|
-| 0.6 |  0.6-gpu    | for gpu nvidia gpu support (requires nvidia-docker v2) | 
-| 0.6 |    0.6-cpu   |   for cpu only use | 
+|  Tag  |  Info |  
+|----------|-------------|
+|   pskj-docker:1804-cpu (default)   |   For cpu only use. Notes: Ubuntu 18-04 |
+|   pskj-docker:1804-gpu    | For gpu nvidia gpu support (requires nvidia-docker v2). Notes: Ubuntu 18-04,Cuda 10.0, Cudnn7  |
 
 
-## How to build
+## How to build yourself
 ```
-docker build -t psjkg .
-```
-
-
-## Start the container in new lab mode (default)
-```
-nvidia-docker run -v `pwd`/workdir:/tmp/ --privileged   -p 8888:8888 psjkg
+cd ubunut1804-(cpu/gpu)
+docker build -t pskj-docker .
 ```
 
-
-## Start the container in default mode
+## Start the container (GPU)
 ```
-nvidia- docker run -t --rm --privileged -e mode='notebook' -v `pwd`/workdir:/tmp/psjkg
+nvidia-docker run --privileged  -p 8888:8888 chrisengelhardt/pskj-docker:1804-gpu
+```
+
+## Start the container (CPU)
+```
+docker run --privileged  -p 8888:8888 chrisengelhardt/pskj-docker:1804-cpu
+```
+
+
+## Permanently save data
+To permanently save data, you need to mount a volume into the /tmp/ folder (-v)
+```
+docker run -v `pwd`/workdir:/tmp/  --privileged  -p 8888:8888 chrisengelhardt/pskj-docker:1804-cpu
 ```
