@@ -32,7 +32,7 @@ RUN wget https://storage.googleapis.com/swift-tensorflow-artifacts/releases/v0.3
 		export PATH=$(pwd)/usr/bin:"${PATH}"
 
 # Install swift jupyter interface
-RUN mkdir swift && cd swift && wget https://github.com/google/swift-jupyter/archive/master.zip && unzip master.zip && \
-		/opt/conda/envs/jupyter_py3/bin/python /swift/swift-jupyter-master/register.py --swift-toolchain ""
+RUN mkdir swift && cd swift && wget https://github.com/google/swift-jupyter/archive/master.zip && unzip master.zip
+RUN	/opt/conda/envs/jupyter_py3/bin/python /swift/swift-jupyter-master/register.py --swift-toolchain ""
 
 CMD ["/opt/conda/envs/jupyter_py3/bin/jupyter", "lab", "--ip=0.0.0.0", "--no-browser", "--allow-root", "--notebook-dir=/tmp"]
